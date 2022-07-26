@@ -14,7 +14,7 @@ let createNewData = ()=>{
         newEntry.innerHTML = `
             <td class="js-entries">${snNumber++}</td>
             <td class="js-entries">${itemName.value}</td>
-            <td class="js-entries">${itemPrice.value}</td>
+            <td class="js-entries">N${itemPrice.value}</td>
             <td class="js-entries">${itemCategory.value}</td>
         
         `
