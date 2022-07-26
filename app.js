@@ -11,6 +11,7 @@ let snNumber = 0;
 
 let createNewData = ()=>{
     addNewEntry.addEventListener('click', ()=>{
+        invoiceDate.innerText = itemDate.value;
       let newEntry = document.createElement('tr');
         newEntry.innerHTML = `
             <td class="js-entries">${snNumber++}</td>
@@ -20,7 +21,6 @@ let createNewData = ()=>{
         
         `
 
-        invoiceDate.innerText = itemDate.value;
 
         // console.log(newEntry)
 
