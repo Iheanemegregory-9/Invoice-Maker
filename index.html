@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inVoice Maker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <div id="invoice-maker">
+
+       <table class="invoice">
+
+
+        <thead>
+            <tr>
+                <th>Item Name</th>
+                <th>Item Price</th>
+                <th>Item Category</th>
+                <th>Order Date</th>
+            </tr>
+        </thead>
+
+
+        <tbody class="entries">
+            <tr>
+                <!-- item name -->
+                <td>
+                    <input type="text" id="item-name">
+                    <div class="error"></div>
+                </td>
+
+                <!-- item price -->
+                <td>
+                    <input  type="number" id="item-price">
+                    <div class="error"></div>
+                </td>
+
+                <!--   Item Category -->
+                <td>
+                    <input type="text" name="" id="item-category">
+                    <div class="error"></div>
+                </td>
+
+                <!-- Order Date -->
+                <td>
+                    <input type="datetime-local" id="item-date">
+                    <div class="error"></div>
+                    <div class="added"></div>
+                </td>
+
+                <!-- Delete Budget -->
+                <!-- <td>
+                   <button type="button" class="delete-entry">&#10005;</button>
+                </td> -->
+            </tr>
+        </tbody>
+       </table>
+
+        <button type="submit" id="addEntry">Add New Entry</button>
+
+       
+    </div>
+    
+
+
+    <div class="final-result">
+
+
+        <h1 class="title"> <i class="bi bi-receipt"></i> Invoice</h1>
+
+        <div class="num-date">
+            <div class="style"></div>
+            <span id="invoiceNumber">Invoice: 00987</span>
+            <span id="invoiceDate">20/04/2022</span>
+        </div>
+
+        <div class="invoiceTo">
+            <h3>Invoice To:</h3>
+            <span id="recieverName">Greg Dev</span>
+            <span id="recieverAddress">99 Wealth Avenue</span>
+            <span id="recieverEmail">Greg@moneyman.com</span>
+        </div>
+
+
+        <div class="final-table">
+            <table id="final-entries">
+    
+                <thead class="final-th">
+                    <tr>
+                        <th>Qt</th>
+                        <th>Item Name</th>
+                        <th>Item Price</th>
+                        <th>Item Category</th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>Itel Phone</td>
+                        <td>N80,000</td>
+                        <td>Electronics</td>
+                    </tr>
+
+
+                    <tr>
+                        <td>1</td>
+                        <td>Itel Phone</td>
+                        <td>N80,000</td>
+                        <td>Electronics</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="print">
+            <button type="submit"> <i class="bi bi-printer print-result" onclick="print()"></i> </button>
+        </div>
+    </div>
+
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
