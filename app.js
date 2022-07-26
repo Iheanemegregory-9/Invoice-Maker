@@ -12,7 +12,7 @@ let createNewData = ()=>{
       let newEntry = document.createElement('tr');
         newEntry.innerHTML = `
             <td class="js-entries">1</td>
-            <td class="js-entries">Itel Phone</td>
+            <td class="js-entries">iPhone 13 Pro Max</td>
             <td class="js-entries">N80,000</td>
             <td class="js-entries">Electronics</td>
         
